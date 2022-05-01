@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root{
+    --main-color:#005ee4;
+}
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -13,21 +19,228 @@ main{
     grid-template-rows: 1fr 4fr;
 }
 
+/* header styles */
 
 header{
-    background-color: lightcoral;
+    background-color: #1e293b;
     grid-column: 2 / 3;
-    padding: 10px;
+    padding: 10px 60px 10px 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 30px;
+    color: white;
+}   
+header .search-bar{
+    display: flex;
+    align-items: center;
 }
+
+header .search-bar label{
+    margin-right: 10px;
+}
+
+header .search-bar #search{
+    flex-grow: 1;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    padding: 4px 8px;
+    height: 30px;
+    font-size: 18px;
+    background-color: white;
+}
+header .btn-grp1{
+    justify-self: end;
+    display: flex;
+    align-items: center;
+}
+header .btn-grp1  > * {
+    cursor: pointer;
+    margin-right: 35px;
+}
+
+header .btn-grp1 #user {
+    margin-right: 0;
+}
+
+header .user-info{
+    display: flex;
+    align-items: center ;
+}
+
+
+
+header .btn-grp2{
+    align-self: center;
+}
+
+header .btn-grp2 ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header .btn-grp2 ul  li  button {
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    outline: none;
+    border: 0;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s;
+}
+header .btn-grp2 ul  li  button:hover{
+    background: var(--main-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.avatar{
+    height: 50px;
+    margin-right: 15px;
+}
+
+/*   main content styles  */
 
 #main-content{
-    background-color: lightsalmon;
+    background-color: #111827;
     grid-column: 2 /3;
+    padding: 20px 60px 20px 60px;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-gap: 20px;
+    color: white;
 }
 
+/* projects styles */
+
+.projects{
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 5px;
+}
+
+.projects .inner-projects{
+    display: grid;
+    grid-template-columns: minmax(250px,1fr) minmax(250px,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project{
+    background-color: #1e293b;
+    padding: 20px 10px 10px 20px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    color: white;
+    border-radius: 10px;
+    border-right: 5px solid var(--main-color);
+    border-left: 5px solid var(--main-color);
+}
+.project .project-btns{
+    place-self:  end;
+}
+.project .project-btns  svg {
+    margin-right: 8px;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+}
+
+.project .project-btns  svg:hover{
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+ /* annoucements styles */
+
+.annous{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 5px;
+}
+
+.inner-annous{
+    background-color: #1e293b;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: repeat(auto-fit,1fr);
+    border-radius: 10px;
+    border-right: 5px solid var(--main-color);
+    border-left: 5px solid var(--main-color);
+}
+.inner-annous div{
+    padding: 8px 0px;
+}
+.inner-annous:nth-child(2n),.inner-annous:nth-child(2){
+    border-bottom: 1px soilid black;
+}
+
+/*  trending styles  */
+
+.trending{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 5px;display: grid;
+}
+
+.inner-trending{
+    background-color: #1e293b;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: repeat(auto-fit,1fr);
+    grid-row-gap: 20px;
+    border-radius: 10px;
+    border-right: 5px solid var(--main-color);
+    border-left: 5px solid var(--main-color);
+}
+
+.inner-trending .trend{
+    display: flex;
+}
+
+
+/* side bar styles */
+
 #sidebar{
-    background-color: lightpink;
+    background: rgb(29,78,216);
+    background: linear-gradient(180deg, rgba(29,78,216,1) 0%, rgba(0,161,232,1) 100%);
+    color: white;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     min-width: 150px;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 40px);
+    grid-gap: 5px;
+    align-items: center;
+}
+
+
+#sidebar .dashboard-title{
+    grid-row: span 2;
+    align-self: start;
+}
+
+#sidebar div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#sidebar div svg{
+    margin-right: 10px;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
 }
