@@ -101,6 +101,7 @@ header .btn-grp2 ul  li  button:hover{
 .avatar{
     height: 50px;
     margin-right: 15px;
+    box-shadow: 1px 1px solid white;
 }
 
 /*   main content styles  */
