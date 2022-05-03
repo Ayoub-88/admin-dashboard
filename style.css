@@ -104,6 +104,16 @@ header .btn-grp2 ul  li  button:hover{
     box-shadow: 1px 1px solid white;
 }
 
+#bell{
+    transition: 0.8s;
+}
+
+#bell:hover{
+    transform: rotateZ(360deg);
+}
+
+
+
 /*   main content styles  */
 
 #main-content{
@@ -232,6 +242,11 @@ header .btn-grp2 ul  li  button:hover{
     display: flex;
     align-items: center;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+#sidebar div:hover{
+    background: #ee5253;
 }
 
 
